@@ -1430,16 +1430,15 @@ a.minimal-contact:hover .contact-icon {
   .about-stats { max-width: 100%; }
   .featured-card { flex-direction: column; }
   .featured-card .project-img-wrap { width: 100%; border-right: none; border-bottom: 1.5px solid var(--border); }
-  .contact-wrap { grid-template-columns: 1fr; }
+  .contact-wrap { grid-template-columns: 1fr; gap: 2.5rem;}
+  .contact-links {justify-self: center; width: 100%; max-width: 320px; margin: 0 auto;}
   .nav-links { display: none; }
   .hamburger { display: block; }
   .navbar { padding: 1rem 1.5rem; }
   .section { padding: 4rem 5%; }
   .scrap-label-1, .scrap-label-2, .scrap-sticker-1, .scrap-sticker-2, .scrap-sticker-3 { display: none; }
-
   .projects-grid { grid-template-columns: 1fr; gap: 3rem; }
   .project-card .project-img-wrap { height: 200px; }
-
 }
 @media (max-width: 600px) {
   .hero-name { font-size: 2.8rem; }
