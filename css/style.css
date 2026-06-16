@@ -106,8 +106,8 @@ img { max-width: 100%; display: block; }
 .photo-tape,
 .washi-tape {
   position: absolute;
-  z-index: 90; /* Forces all tapes to stack cleanly on top of cards, borders, and text components */
-  mix-blend-mode: multiply; /* Lets underlying page details show through realistically */
+  z-index: 90; 
+  mix-blend-mode: multiply; 
   opacity: 0.85;
 }
 
@@ -117,7 +117,7 @@ img { max-width: 100%; display: block; }
 [data-theme="dark"] .hero-tape,
 [data-theme="dark"] .photo-tape,
 [data-theme="dark"] .washi-tape {
-  mix-blend-mode: normal; /* Prevents dark-on-dark invisible assets */
+  mix-blend-mode: normal; 
 }
 
 /* SECTION SEPARATOR TAPES (Page Accents) */
@@ -266,9 +266,15 @@ img { max-width: 100%; display: block; }
 
 /* NAV */
 .navbar {
-  position: fixed; top: 0; left: 0; right: 0;
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  box-sizing: border-box;
   z-index: 200;
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
   padding: 0.9rem 2.5rem;
   background: rgba(245,240,232,0.88);
   backdrop-filter: blur(14px);
@@ -307,14 +313,14 @@ img { max-width: 100%; display: block; }
   background: var(--card); border-left: 2px solid var(--border);
   z-index: 300; padding: 5rem 2rem 2rem;
   transition: right 0.3s ease;
+  visibility: hidden;
 }
-.mobile-nav.open { right: 0; }
+.mobile-nav.open { right: 0; visibility: visible;}
 .mobile-nav ul { list-style: none; }
 .mobile-nav li { margin-bottom: 2rem; }
 .mobile-nav a { font-family: var(--font-hand); font-size: 2rem; color: var(--text); }
 .close-nav { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--muted); }
 
-/* SCRAPBOOK CARD BASE */
 /* SCRAPBOOK CARD BASE */
 .scrapbook-card {
   background: var(--card);

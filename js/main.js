@@ -111,7 +111,6 @@ if (form && submitBtn && formNote) {
 // ==========================================
 // 8. PINBOARD CERTIFICATE LIGHTBOX MODAL
 // ==========================================
-// Ensures script hooks attach to your elements flawlessly after DOM compilation
 window.openCertModal = function(imageSrc) {
   const modal = document.getElementById("certModal");
   const modalImg = document.getElementById("certModalImg");
