@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTMS Easy Banking — Karylle Mish Gellica</title>
+  <link rel="icon" type="image/jpeg" href="../assets/apple.jpg">
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <button class="theme-toggle" id="themeToggle"><span class="theme-icon">☽</span></button>
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">kmg</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">about</a></li><li><a href="../index.html#skills">skills</a></li>
+      <li><a href="../index.html#projects">projects</a></li><li><a href="../index.html#education">education</a></li>
+      <li><a href="../index.html#certifications">certs</a></li><li><a href="../index.html#contact">contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <button class="close-nav" id="closeNav">&#10005;</button>
+    <ul>
+      <li><a href="../index.html#about" class="mob-link">about</a></li><li><a href="../index.html#skills" class="mob-link">skills</a></li>
+      <li><a href="../index.html#projects" class="mob-link">projects</a></li><li><a href="../index.html#education" class="mob-link">education</a></li>
+      <li><a href="../index.html#certifications" class="mob-link">certs</a></li><li><a href="../index.html#contact" class="mob-link">contact</a></li>
+    </ul>
+  </div>
+  <div class="project-page">
+    <a href="../index.html#projects" class="back-btn"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="15 18 9 12 15 6"></polyline></svg>back to projects</a>
+    <div class="project-hero">
+      <div class="project-hero-inner">
+        <div class="project-badge-row">
+          <span class="project-badge">Backend</span>
+          <span class="project-badge green">OOP</span>
+          <span class="project-badge brown">2025</span>
+        </div>
+        <h1>BTMS: Easy Banking |<br/>Bank Operations System</h1>
+        <p class="project-tagline">A straightforward banking program that lets users handle everyday account tasks — opening accounts, depositing, withdrawing, and checking balances — built entirely on clean object-oriented logic.</p>
+        <div class="project-hero-links">
+          <span class="hero-link secondary" style="cursor:default; opacity:0.5;">No public repo</span>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-section">
+      <div class="gallery-wrap">
+        <div class="gallery-track">
+          <div class="gallery-slide"><img src="../assets/btms.png" alt="BTMS Screenshot 1" /></div>
+          <div class="gallery-slide"><img src="../assets/btms-2.png" alt="BTMS Screenshot 2" /></div>
+          <div class="gallery-slide"><img src="../assets/btms-3.png" alt="BTMS Screenshot 3" /></div>
+          <div class="gallery-slide"><img src="../assets/btms-4.png" alt="BTMS Screenshot 4" /></div>
+          <div class="gallery-slide"><img src="../assets/btms-5.png" alt="BTMS Screenshot 5" /></div>
+        </div>
+        <button class="gallery-btn prev">&#8592;</button>
+        <button class="gallery-btn next">&#8594;</button>
+      </div>
+      <div class="gallery-dots">
+        <button class="gallery-dot active"></button><button class="gallery-dot"></button>
+        <button class="gallery-dot"></button><button class="gallery-dot"></button><button class="gallery-dot"></button>
+      </div>
+    </div>
+    <div class="info-strip">
+      <div class="info-strip-item"><span class="info-strip-label">Type</span><span class="info-strip-value">Backend / CLI</span></div>
+      <div class="info-strip-item"><span class="info-strip-label">Year</span><span class="info-strip-value">2025</span></div>
+      <div class="info-strip-item"><span class="info-strip-label">Team</span><span class="info-strip-value">6 members</span></div>
+      <div class="info-strip-item"><span class="info-strip-label">Field</span><span class="info-strip-value">Fintech · OOP</span></div>
+    </div>
+    <div class="story-section">
+      <div class="story-card">
+        <div class="story-tape story-tape-1"></div>
+        <div class="story-card-label">the challenge</div>
+        <h3>What problem did we solve?</h3>
+        <p>Managing everyday personal banking or tracking transactions using paper records or scattered files is slow, prone to math mistakes, and lacks a simple way to instantly verify whether an account has enough funds before a withdrawal goes through.</p>
+      </div>
+      <div class="story-card">
+        <div class="story-tape story-tape-2"></div>
+        <div class="story-card-label">what we built</div>
+        <h3>How did we solve it?</h3>
+        <p>We created a unified Python command-line system that models real-world account structures using object-oriented logic. It handles deposits and withdrawals safely by instantly checking available balances, enforces strict validation to block invalid inputs, and keeps customer details updated in a central data structure.</p>
+      </div>
+      <div class="story-card full-width">
+        <div class="story-tape story-tape-3"></div>
+        <div class="story-card-label">what i learned</div>
+        <h3>What did this teach me?</h3>
+        <p>BTMS was where OOP stopped being a concept I understood in theory and became something I actually used to solve a real design problem. Before this, I'd write classes because the assignment said to. Here, the structure genuinely mattered — modeling an account as an object with its own state and behavior made the code dramatically easier to reason about and extend. I also had to think hard about validation: what happens when someone enters a negative number? What about withdrawing more than the balance? Handling edge cases isn't glamorous, but getting them wrong in a banking context means the system is fundamentally untrustworthy. That discipline of thinking through failure modes before they happen has stayed with me.</p>
+      </div>
+    </div>
+    <hr class="section-divider" />
+    <div class="tech-section">
+      <h2>Tech Stack</h2>
+      <div class="tech-grid">
+        <div class="tech-item"><img src="../assets/python.webp" alt="Python" />Python</div>
+        <div class="tech-item">OOP Design</div>
+        <div class="tech-item">Input Validation</div>
+        <div class="tech-item">CLI Interface</div>
+      </div>
+    </div>
+    <hr class="section-divider" />
+    <div class="contributors-section">
+      <h2>Contributors</h2>
+      <div class="contributors-list">
+        <span class="contributor-pill me">Karylle Mish Gellica</span>
+        <span class="contributor-pill">Bai Fatima Andong</span>
+        <span class="contributor-pill">Christian James Cahilig</span>
+        <span class="contributor-pill">Daniel Cott Gerarman</span>
+        <span class="contributor-pill">Jan Loren Odiong</span>
+        <span class="contributor-pill">John Llorie Sarmiento</span>
+      </div>
+    </div>
+    <hr class="section-divider" />
+    <div class="project-nav">
+      <a href="leo-revita.html" class="project-nav-card">
+        <div class="nav-card-img"><img src="../assets/leorevita.png" alt="Leo Revita" /></div>
+        <div><div class="nav-card-label">← previous</div><div class="nav-card-title">Leo Revita | Salon System</div></div>
+      </a>
+      <a href="focuspilot.html" class="project-nav-card next-card">
+        <div class="nav-card-img"><img src="../assets/adhd.png" alt="FocusPilot" /></div>
+        <div><div class="nav-card-label">next →</div><div class="nav-card-title">FocusPilot | ADHD Task Management</div></div>
+      </a>
+    </div>
+  </div>
+  <script src="project.js"></script>
+</body>
+</html>

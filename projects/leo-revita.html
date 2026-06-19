@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leo Revita — Karylle Mish Gellica</title>
+  <link rel="icon" type="image/jpeg" href="../assets/apple.jpg">
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <button class="theme-toggle" id="themeToggle"><span class="theme-icon">☽</span></button>
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">kmg</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">about</a></li><li><a href="../index.html#skills">skills</a></li>
+      <li><a href="../index.html#projects">projects</a></li><li><a href="../index.html#education">education</a></li>
+      <li><a href="../index.html#certifications">certs</a></li><li><a href="../index.html#contact">contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <button class="close-nav" id="closeNav">&#10005;</button>
+    <ul>
+      <li><a href="../index.html#about" class="mob-link">about</a></li><li><a href="../index.html#skills" class="mob-link">skills</a></li>
+      <li><a href="../index.html#projects" class="mob-link">projects</a></li><li><a href="../index.html#education" class="mob-link">education</a></li>
+      <li><a href="../index.html#certifications" class="mob-link">certs</a></li><li><a href="../index.html#contact" class="mob-link">contact</a></li>
+    </ul>
+  </div>
+  <div class="project-page">
+    <a href="../index.html#projects" class="back-btn"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="15 18 9 12 15 6"></polyline></svg>back to projects</a>
+    <div class="project-hero">
+      <div class="project-hero-inner">
+        <div class="project-badge-row">
+          <span class="project-badge">Full Stack</span>
+          <span class="project-badge green">Web App</span>
+          <span class="project-badge brown">2025</span>
+        </div>
+        <h1>Leo Revita | Hair Salon<br/>Management System</h1>
+        <p class="project-tagline">A centralized automation platform that modernizes local salon operations by integrating real-time scheduling, client loyalty, employee coordination, and stock tracking into a single workflow.</p>
+        <div class="project-hero-links">
+          <a href="https://github.com/f4tm4ze/Salon-Management-System" target="_blank" class="hero-link primary">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-section">
+      <div class="gallery-wrap">
+        <div class="gallery-track">
+          <div class="gallery-slide"><img src="../assets/leorevita.png" alt="Leo Revita Screenshot 1" /></div>
+          <div class="gallery-slide"><img src="../assets/leorevita-2.png" alt="Leo Revita Screenshot 2" /></div>
+          <div class="gallery-slide"><img src="../assets/leorevita-3.png" alt="Leo Revita Screenshot 3" /></div>
+          <div class="gallery-slide"><img src="../assets/leorevita-4.png" alt="Leo Revita Screenshot 4" /></div>
+          <div class="gallery-slide"><img src="../assets/leorevita-5.png" alt="Leo Revita Screenshot 5" /></div>
+        </div>
+        <button class="gallery-btn prev">&#8592;</button>
+        <button class="gallery-btn next">&#8594;</button>
+      </div>
+      <div class="gallery-dots">
+        <button class="gallery-dot active"></button><button class="gallery-dot"></button>
+        <button class="gallery-dot"></button><button class="gallery-dot"></button><button class="gallery-dot"></button>
+      </div>
+    </div>
+    <div class="info-strip">
+      <div class="info-strip-item"><span class="info-strip-label">Type</span><span class="info-strip-value">Full Stack Web App</span></div>
+      <div class="info-strip-item"><span class="info-strip-label">Year</span><span class="info-strip-value">2025</span></div>
+      <div class="info-strip-item"><span class="info-strip-label">Team</span><span class="info-strip-value">3 members</span></div>
+      <div class="info-strip-item"><span class="info-strip-label">Field</span><span class="info-strip-value">Business Automation</span></div>
+    </div>
+    <div class="story-section">
+      <div class="story-card">
+        <div class="story-tape story-tape-1"></div>
+        <div class="story-card-label">the challenge</div>
+        <h3>What problem did we solve?</h3>
+        <p>Relying on manual logbooks, disconnected spreadsheets, and social media messaging for customer appointments causes overlapping bookings, mismanaged technician assignments, blind spots in real-time inventory tracking, and vulnerable sales accounting records. Local businesses run like this lose money quietly in ways they can't even measure.</p>
+      </div>
+      <div class="story-card">
+        <div class="story-tape story-tape-2"></div>
+        <div class="story-card-label">what we built</div>
+        <h3>How did we solve it?</h3>
+        <p>We engineered a multi-subsystem full-stack platform that centralizes salon operations. It features a custom appointment builder that coordinates technician availability with room capacities, tracks dynamic material consumption per service via complex many-to-many database pivot tables, and digitizes transaction records into live financial charts for the branch manager.</p>
+      </div>
+      <div class="story-card full-width">
+        <div class="story-tape story-tape-3"></div>
+        <div class="story-card-label">what i learned</div>
+        <h3>What did this teach me?</h3>
+        <p>This was the first project where I had to think seriously about database design beyond just "store the data." The many-to-many pivot tables for tracking which materials get consumed per service, per technician, per appointment — that structure took several iterations to get right, and every time we changed it we had to rewrite half the logic downstream. It taught me to slow down and model the data correctly before writing application code, because the database schema is essentially your commitment to how the entire system thinks. I also learned what it means to build for a real business owner — not a professor grading a rubric, but someone who needs to close their books at the end of the day. That shift in who you're building for changes everything about your priorities.</p>
+      </div>
+    </div>
+    <hr class="section-divider" />
+    <div class="tech-section">
+      <h2>Tech Stack</h2>
+      <div class="tech-grid">
+        <div class="tech-item"><img src="../assets/laravel.png" alt="Laravel" />Laravel</div>
+        <div class="tech-item"><img src="../assets/php.png" alt="PHP" />PHP</div>
+        <div class="tech-item"><img src="../assets/mysql.png" alt="MySQL" />MySQL</div>
+        <div class="tech-item"><img src="../assets/bootstrap.png" alt="Bootstrap" />Bootstrap</div>
+        <div class="tech-item">Pivot Tables</div>
+        <div class="tech-item">Financial Charting</div>
+      </div>
+    </div>
+    <hr class="section-divider" />
+    <div class="contributors-section">
+      <h2>Contributors</h2>
+      <div class="contributors-list">
+        <span class="contributor-pill me">Karylle Mish Gellica</span>
+        <span class="contributor-pill">Bai Fatima A. Andong</span>
+        <span class="contributor-pill">Christian James C. Cahilig</span>
+      </div>
+    </div>
+    <hr class="section-divider" />
+    <div class="project-nav">
+      <a href="irishr.html" class="project-nav-card">
+        <div class="nav-card-img"><img src="../assets/irishr.png" alt="IrisHR" /></div>
+        <div><div class="nav-card-label">← previous</div><div class="nav-card-title">IrisHR | HR Management System</div></div>
+      </a>
+      <a href="btms.html" class="project-nav-card next-card">
+        <div class="nav-card-img"><img src="../assets/btms.png" alt="BTMS" /></div>
+        <div><div class="nav-card-label">next →</div><div class="nav-card-title">BTMS: Easy Banking</div></div>
+      </a>
+    </div>
+  </div>
+  <script src="project.js"></script>
+</body>
+</html>

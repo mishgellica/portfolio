@@ -127,6 +127,9 @@ window.openCertModal = function(imageSrc) {
   }
 };
 
+// ==========================================
+// 9. CLOSE CERTIFICATE MODAL FUNCTION
+// ==========================================
 window.closeCertModal = function() {
   const modal = document.getElementById("certModal");
   if (modal) {
@@ -139,3 +142,4 @@ window.closeCertModal = function() {
     document.body.style.overflow = "auto";
   }
 };
+

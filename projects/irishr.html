@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IrisHR — Karylle Mish Gellica</title>
+  <link rel="icon" type="image/jpeg" href="../assets/apple.jpg">
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <button class="theme-toggle" id="themeToggle"><span class="theme-icon">☽</span></button>
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">kmg</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">about</a></li><li><a href="../index.html#skills">skills</a></li>
+      <li><a href="../index.html#projects">projects</a></li><li><a href="../index.html#education">education</a></li>
+      <li><a href="../index.html#certifications">certs</a></li><li><a href="../index.html#contact">contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <button class="close-nav" id="closeNav">&#10005;</button>
+    <ul>
+      <li><a href="../index.html#about" class="mob-link">about</a></li><li><a href="../index.html#skills" class="mob-link">skills</a></li>
+      <li><a href="../index.html#projects" class="mob-link">projects</a></li><li><a href="../index.html#education" class="mob-link">education</a></li>
+      <li><a href="../index.html#certifications" class="mob-link">certs</a></li><li><a href="../index.html#contact" class="mob-link">contact</a></li>
+    </ul>
+  </div>
+  <div class="project-page">
+    <a href="../index.html#projects" class="back-btn"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="15 18 9 12 15 6"></polyline></svg>back to projects</a>
+    <div class="project-hero">
+      <div class="project-hero-inner">
+        <div class="project-badge-row">
+          <span class="project-badge">Full Stack</span>
+          <span class="project-badge green">Security-Focused</span>
+          <span class="project-badge brown">2025</span>
+        </div>
+        <h1>IrisHR | Human Resource<br/>Management System</h1>
+        <p class="project-tagline">A company platform built to move messy employee files, leave requests, and performance reviews online — with serious attention to keeping private data actually private.</p>
+        <div class="project-hero-links">
+          <a href="https://github.com/christianj-cc/Iris-HR" target="_blank" class="hero-link primary">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-section">
+      <div class="gallery-wrap">
+        <div class="gallery-track">
+          <div class="gallery-slide"><img src="../assets/irishr.png" alt="IrisHR Screenshot 1" /></div>
+          <div class="gallery-slide"><img src="../assets/irishr-2.png" alt="IrisHR Screenshot 2" /></div>
+          <div class="gallery-slide"><img src="../assets/irishr-3.png" alt="IrisHR Screenshot 3" /></div>
+          <div class="gallery-slide"><img src="../assets/irishr-4.png" alt="IrisHR Screenshot 4" /></div>
+          <div class="gallery-slide"><img src="../assets/irishr-5.png" alt="IrisHR Screenshot 5" /></div>
+        </div>
+        <button class="gallery-btn prev">&#8592;</button>
+        <button class="gallery-btn next">&#8594;</button>
+      </div>
+      <div class="gallery-dots">
+        <button class="gallery-dot active"></button><button class="gallery-dot"></button>
+        <button class="gallery-dot"></button><button class="gallery-dot"></button><button class="gallery-dot"></button>
+      </div>
+    </div>
+    <div class="info-strip">
+      <div class="info-strip-item"><span class="info-strip-label">Type</span><span class="info-strip-value">Full Stack Web App</span></div>
+      <div class="info-strip-item"><span class="info-strip-label">Year</span><span class="info-strip-value">2025</span></div>
+      <div class="info-strip-item"><span class="info-strip-label">Team</span><span class="info-strip-value">2 members</span></div>
+      <div class="info-strip-item"><span class="info-strip-label">Field</span><span class="info-strip-value">HR Tech · Security</span></div>
+    </div>
+    <div class="story-section">
+      <div class="story-card">
+        <div class="story-tape story-tape-1"></div>
+        <div class="story-card-label">the challenge</div>
+        <h3>What problem did we solve?</h3>
+        <p>Traditional HR systems are full of security holes — privilege escalation, unauthorized employee record access, data tampering, and leaks of sensitive personal and financial data. Most of these aren't theoretical risks either; they happen when systems are built without thinking about access control from the ground up.</p>
+      </div>
+      <div class="story-card">
+        <div class="story-tape story-tape-2"></div>
+        <div class="story-card-label">what we built</div>
+        <h3>How did we solve it?</h3>
+        <p>We developed a multi-tier HR web architecture protected by rigid Role-Based Access Control levels — Admin, HR Manager, and Employee. We conducted a full Security Threat Analysis to identify system vulnerabilities, then implemented audit logging, input sanitization, and proactive security patches to actively mitigate data disclosure and unauthorized manipulation risks.</p>
+      </div>
+      <div class="story-card full-width">
+        <div class="story-tape story-tape-3"></div>
+        <div class="story-card-label">what i learned</div>
+        <h3>What did this teach me?</h3>
+        <p>Security used to feel like an afterthought to me — something you bolted on at the end. Building IrisHR forced me to think about it as a structural decision made at every layer. When you're handling employee salaries, performance reviews, and personal identifiers, the cost of getting it wrong isn't just a bug you patch — it's someone's data being exposed. Learning to model threats before writing a single line of code changed how I approach every project now. I also got deep into RBAC implementation and learned how nuanced permission systems really are — the difference between what a user should see and what they can technically access is a gap you have to deliberately close at every endpoint, not just the frontend.</p>
+      </div>
+    </div>
+    <hr class="section-divider" />
+    <div class="tech-section">
+      <h2>Tech Stack</h2>
+      <div class="tech-grid">
+        <div class="tech-item"><img src="../assets/php.png" alt="PHP" />PHP</div>
+        <div class="tech-item"><img src="../assets/mysql.png" alt="MySQL" />MySQL</div>
+        <div class="tech-item"><img src="../assets/html5.png" alt="HTML" />HTML</div>
+        <div class="tech-item"><img src="../assets/css3.png" alt="CSS" />CSS</div>
+        <div class="tech-item"><img src="../assets/javascript.png" alt="JavaScript" />JavaScript</div>
+        <div class="tech-item">RBAC</div>
+        <div class="tech-item">Audit Logging</div>
+      </div>
+    </div>
+    <hr class="section-divider" />
+    <div class="contributors-section">
+      <h2>Contributors</h2>
+      <div class="contributors-list">
+        <span class="contributor-pill me">Karylle Mish Gellica</span>
+        <span class="contributor-pill">Christian James C. Cahilig</span>
+      </div>
+    </div>
+    <hr class="section-divider" />
+    <div class="project-nav">
+      <a href="diabetes-prediction.html" class="project-nav-card">
+        <div class="nav-card-img"><img src="../assets/diabetes.png" alt="Diabetes" /></div>
+        <div><div class="nav-card-label">← previous</div><div class="nav-card-title">Diabetes Prediction System</div></div>
+      </a>
+      <a href="leo-revita.html" class="project-nav-card next-card">
+        <div class="nav-card-img"><img src="../assets/leorevita.png" alt="Leo Revita" /></div>
+        <div><div class="nav-card-label">next →</div><div class="nav-card-title">Leo Revita | Salon Management System</div></div>
+      </a>
+    </div>
+  </div>
+  <script src="project.js"></script>
+</body>
+</html>
