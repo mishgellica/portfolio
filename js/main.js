@@ -166,11 +166,11 @@ window.closeCertModal = function() {
       "color:#c97a7a; font-size:16px; font-weight:bold; font-family: sans-serif;"
     );
     console.log(
-      "%cthanks for poking around. if you're a recruiter or just curious — let's connect: mishgellica@gmail.com",
+      "%cthanks for poking around. if you're a recruiter or just curious, let's connect: mishgellica@gmail.com",
       "color:#4a7a5a; font-size:13px; font-family: sans-serif;"
     );
     console.log(
-      "%c(and yes, this portfolio was hand-coded with a lot of trial, error, and iced coffee.)",
+      "%c(and yes, this portfolio was coded with a lot of trial, error, and ice cream.)",
       "color:#7a6050; font-size:12px; font-style: italic; font-family: sans-serif;"
     );
   });

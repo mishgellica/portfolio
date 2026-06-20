@@ -826,17 +826,15 @@ img { max-width: 100%; display: block; }
   filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.05)); 
 }
 
-/* THE TWO-COLUMN PARTITION WORKHORSE */
 .edu-text {
   display: flex;
   flex-grow: 1;
-  gap: 3rem;              /* Horizontal channel space between columns */
+  gap: 3rem;           
   align-items: flex-start;
 }
 
-/* Left Column: Title & Institution */
 .edu-left-col {
-  flex: 1;                /* Allocates shared space evenly */
+  flex: 1;              
   min-width: 240px;
 }
 
@@ -850,12 +848,10 @@ img { max-width: 100%; display: block; }
 
 .timeline-school { 
   font-family: var(--font-hand); 
-  font-size: 1.1rem;      /* Scaled down cleanly under the title header */
+  font-size: 1.1rem;     
   color: var(--green); 
   margin: 0; 
 }
-
-/* Right Column: Timestamps & Meta Descriptions */
 .edu-right-col {
   flex: 0.8;             
 }
@@ -1198,7 +1194,6 @@ img { max-width: 100%; display: block; }
 .pin-left  { left: 50%; transform: translateX(-50%) rotate(-5deg); }
 .pin-right { left: 50%; transform: translateX(-50%) rotate(3deg); }
 
-/* Modal */
 .cert-modal {
   display: none;
   position: fixed;
@@ -1263,9 +1258,9 @@ img { max-width: 100%; display: block; }
 .contact-header {
   display: flex;
   flex-direction: column;
-  align-items: center;    /* Perfect horizontal center alignment for children */
-  text-align: center;     /* Centers the text inside the h2 element */
-  gap: 0.5rem;            /* Clean, tight gap between h2 and p */
+  align-items: center;    
+  text-align: center;    
+  gap: 0.5rem;           
   margin-bottom: 2.5rem;
   width: 100%;
 }
@@ -1277,18 +1272,18 @@ img { max-width: 100%; display: block; }
 .contact-sub { 
   color: var(--muted); 
   max-width: 460px; 
-  margin: 0 auto;         /* Centers the paragraph block within the header wrapper */
+  margin: 0 auto;         
   line-height: 1.7; 
-  text-align: center;     /* Switches from justify to center for a clean, balanced look */
+  text-align: center;   
 }
 .contact-wrap { 
   display: grid; 
-  grid-template-columns: 1fr 1.2fr; /* Shims the layout balance slightly toward the form */
-  gap: 4rem;                        /* Tightens the gap between links and form */
+  grid-template-columns: 1fr 1.2fr; 
+  gap: 4rem;                       
   align-items: start; 
   
-  max-width: 850px;                 /* Restricts width so elements don't stretch to screen walls */
-  margin: 0 auto;                   /* Centers the entire row block, creating clean side margins */
+  max-width: 850px;                 
+  margin: 0 auto;                  
   width: 100%;
 }
 .contact-links { 
@@ -1297,7 +1292,7 @@ img { max-width: 100%; display: block; }
   gap: 1rem; 
   width: fit-content;    
   max-width: 320px;
-  justify-self: end;                /* Nudges the links slightly closer to the form block */
+  justify-self: end;          
 }
 .contact-form { 
   padding: 1.8rem; 
@@ -1341,7 +1336,6 @@ img { max-width: 100%; display: block; }
   font-size: 1.1rem; 
 }
 
-/* Hover States for Interactive Links Only */
 a.minimal-contact:hover {
   transform: translateX(6px);
   color: var(--pink);
@@ -1350,8 +1344,6 @@ a.minimal-contact:hover {
 a.minimal-contact:hover .contact-icon {
   color: var(--pink);
 }
-
-/* Static Location Rule */
 .location-item {
   cursor: default;
   color: var(--muted);
@@ -1370,20 +1362,20 @@ a.minimal-contact:hover .contact-icon {
 .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--pink); }
 .form-note { font-family: var(--font-hand); font-size: 0.95rem; color: var(--green); text-align: center; margin-top: 0.6rem; min-height: 1.2rem; }
 
-/* ==========================================================================
+/* ==================
    FOOTER SECTION
-   ========================================================================== */
+   ==================*/
 .footer {
-  /* Dynamic Background Color Swap with Frost Blur to Defend Against Floating Elements */
   background: rgba(var(--bg-rgb, 245, 240, 232), 0.75); 
   backdrop-filter: blur(12px) saturate(160%);
   -webkit-backdrop-filter: blur(12px) saturate(160%);
   color: var(--text);
   padding: 2rem 2rem 1.5rem 2rem; 
   border-top: 3px solid var(--pink);
+  position: relative;
+  z-index: 10;
 }
 
-/* Base Light/Dark adaptive colors natively using tokens */
 [data-theme="dark"] .footer {
   background: rgba(26, 20, 16, 0.8);
 }
@@ -1396,7 +1388,6 @@ a.minimal-contact:hover .contact-icon {
   margin-bottom: 1.5rem;
 }
 
-/* Part 1: Left Container Spacing */
 .footer-status-group {
   display: flex;
   flex-direction: column;
@@ -1404,7 +1395,6 @@ a.minimal-contact:hover .contact-icon {
   min-width: 220px;
 }
 
-/* Part 2: Centered Brand Identity Block */
 .footer-brand {
   text-align: center;
   flex: 1;
@@ -1424,7 +1414,6 @@ a.minimal-contact:hover .contact-icon {
   color: var(--muted);
 }
 
-/* Blinking Status System Setup */
 .footer-status {
   display: flex;
   align-items: center;
@@ -1443,13 +1432,13 @@ a.minimal-contact:hover .contact-icon {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: #4a7a5a; /* Native forest green matching accent2 */
+  background: #4a7a5a;
   box-shadow: 0 0 0 0 rgba(74, 122, 90, 0.6);
   animation: statusPulse 2s infinite;
 }
 
 [data-theme="dark"] .status-dot {
-  background: #7abf8a; /* Bright neon green on dark surfaces */
+  background: #7abf8a;
 }
 
 @keyframes statusPulse {
@@ -1473,8 +1462,6 @@ a.minimal-contact:hover .contact-icon {
   font-weight: 600;
   color: var(--accent); 
 }
-
-/* Part 3: Call To Action Action Items layout */
 .footer-cta {
   display: flex;
   align-items: center;
@@ -1482,8 +1469,6 @@ a.minimal-contact:hover .contact-icon {
   gap: 1rem;
   min-width: 260px;
 }
-
-/* Scrapbook Styled Custom Interactive Buttons */
 .footer-resume-btn {
   display: inline-flex;
   align-items: center;
@@ -1526,36 +1511,24 @@ a.minimal-contact:hover .contact-icon {
   color: var(--pink);
 }
 
-.footer-divider {
-  border: 0;
-  height: 1px;
-  background: var(--border);
-  opacity: 0.5;
-  margin: 1.5rem 0;
-}
-
-/* Modernized 2-Column Core Architecture Grid */
-.footer-nav-grid {
+.footer-centered-grid {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  gap: 6rem; 
   align-items: start;
-  gap: 2rem;
-}
-
-.footer-links-wrapper {
-  display: flex;
-  gap: 4rem;
 }
 
 .footer-nav-col {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  text-align: left;
+  align-items: flex-start;
 }
 
-.footer-connect-col {
-  align-items: flex-end;
-  text-align: right;
+.footer-connect-center {
+  min-width: 200px; 
 }
 
 .footer-nav-label {
@@ -1580,12 +1553,11 @@ a.minimal-contact:hover .contact-icon {
   opacity: 1;
   color: var(--pink);
 }
-
-/* Social Icon Blocks Spacing Adjustments */
 .footer-socials {
   display: flex;
   gap: 0.75rem;
   margin-bottom: 0.5rem;
+  justify-content: flex-start; 
 }
 
 .social-link {
@@ -1609,35 +1581,9 @@ a.minimal-contact:hover .contact-icon {
   font-size: 0.9rem;
   color: var(--muted);
   margin: 0;
+  white-space: nowrap; 
 }
 
-/* Footer Bottom Strip Details */
-.footer-bottom {
-  text-align: center;
-  padding-top: 0.25rem;
-}
-
-.footer-heart { 
-  font-family: var(--font-hand); 
-  font-size: 0.85rem; 
-  color: var(--muted);
-  margin: 0;
-}
-
-/* Responsive Adaptive Fluid Breakpoints */
-@media (max-width: 900px) {
-  .footer-top {
-    flex-direction: column;
-    text-align: center;
-    gap: 1.5rem;
-  }
-  .footer-status-group, .footer-cta {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-width: 100%;
-  }
-}
 
 /* REVEAL */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -1657,6 +1603,17 @@ a.minimal-contact:hover .contact-icon {
   .section { padding: 4rem 5%; }
   .scrap-label-1, .scrap-label-2, .scrap-sticker-1, .scrap-sticker-2, .scrap-sticker-3 { display: none; }
   .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .footer-status-group, .footer-cta {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 100%;
+  }
 }
 @media (max-width: 600px) {
   .hero-name { 
@@ -1676,16 +1633,23 @@ a.minimal-contact:hover .contact-icon {
   .photo-frame { width: 200px; height: 250px; }
   .edu-inner { flex-direction: column; }
   .projects-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-  .footer-nav-grid {
-    grid-template-columns: 1fr;
+  .footer-centered-grid {
+    grid-template-columns: 1fr; 
     gap: 2rem;
+    justify-content: center;
+    text-align: center;
   }
-  .footer-links-wrapper {
-    justify-content: space-between;
-    gap: 1rem;
-  }
-  .footer-connect-col {
+
+  .footer-nav-col, .footer-connect-center {
     align-items: center;
     text-align: center;
+  }
+
+  .footer-nav-col a {
+    margin: 0 auto;
+  }
+
+  .footer-socials {
+    justify-content: center;
   }
 }
