@@ -467,17 +467,223 @@ img { max-width: 100%; display: block; }
   margin: 0 8% 3rem;
 }
 
-/* FOOTER */
+/* ==========================================================================
+   FOOTER SECTION
+   ========================================================================== */
 .footer {
-  background: var(--text); color: var(--bg);
-  padding: 2.5rem; text-align: center;
+  /* Dynamic Background Color Swap with Frost Blur to Defend Against Floating Elements */
+  background: rgba(var(--bg-rgb, 245, 240, 232), 0.75); 
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  color: var(--text);
+  padding: 2rem 2rem 1.5rem 2rem; 
   border-top: 3px solid var(--pink);
 }
-.footer-logo { font-family: var(--font-logo); font-size: 1.5rem; margin-bottom: 0.4rem; font-weight: 700; }
-.footer-copy { font-family: var(--font-hand); font-size: 0.95rem; opacity: 0.7; margin-bottom: 0.2rem; }
-.footer-heart { font-family: var(--font-hand); font-size: 0.9rem; color: var(--pink); }
 
-.footer-socials { display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin: 1.2rem 0; }
+/* Base Light/Dark adaptive colors natively using tokens */
+[data-theme="dark"] .footer {
+  background: rgba(26, 20, 16, 0.8);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Part 1: Left Container Spacing */
+.footer-status-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 220px;
+}
+
+/* Part 2: Centered Brand Identity Block */
+.footer-brand {
+  text-align: center;
+  flex: 1;
+}
+
+.footer-logo { 
+  font-family: var(--font-logo); 
+  font-size: 1.8rem; 
+  margin-bottom: 0.2rem; 
+  font-weight: 700; 
+  letter-spacing: -0.5px;
+  color: var(--text);
+}
+
+.footer-tagline {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* Blinking Status System Setup */
+.footer-status {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-hand);
+  font-size: 0.9rem;
+}
+
+.status-text {
+  color: var(--text);
+  font-weight: 500;
+  animation: textBlink 2.5s ease-in-out infinite;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #4a7a5a; /* Native forest green matching accent2 */
+  box-shadow: 0 0 0 0 rgba(74, 122, 90, 0.6);
+  animation: statusPulse 2s infinite;
+}
+
+[data-theme="dark"] .status-dot {
+  background: #7abf8a; /* Bright neon green on dark surfaces */
+}
+
+@keyframes statusPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(74, 122, 90, 0.5); }
+  70%  { box-shadow: 0 0 0 6px rgba(74, 122, 90, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(74, 122, 90, 0); }
+}
+
+@keyframes textBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+.footer-time {
+  font-family: var(--font-hand);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+#localTime {
+  font-weight: 600;
+  color: var(--accent); 
+}
+
+/* Part 3: Call To Action Action Items layout */
+.footer-cta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  min-width: 260px;
+}
+
+/* Scrapbook Styled Custom Interactive Buttons */
+.footer-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-hand);
+  font-size: 0.95rem;
+  padding: 0.6rem 1.3rem;
+  border-radius: 99px;
+  border: 1.5px solid var(--border);
+  color: var(--text);
+  background: var(--card);
+  text-decoration: none;
+  transition: transform 0.2s cubic-bezier(.34,1.56,.64,1), background 0.2s, border-color 0.2s;
+}
+
+.footer-resume-btn:hover {
+  transform: translateY(-2px);
+  background: var(--bg2);
+  border-color: var(--pink);
+}
+
+.footer-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-hand);
+  font-size: 0.95rem;
+  padding: 0.6rem 1.3rem;
+  border-radius: 99px;
+  border: 1.5px solid var(--pink);
+  color: var(--card);
+  background: var(--pink);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s cubic-bezier(.34,1.56,.64,1), background 0.2s, border-color 0.2s;
+}
+
+.footer-cta-btn:hover {
+  transform: translateY(-2px);
+  background: transparent;
+  color: var(--pink);
+}
+
+.footer-divider {
+  border: 0;
+  height: 1px;
+  background: var(--border);
+  opacity: 0.5;
+  margin: 1.5rem 0;
+}
+
+/* Modernized 2-Column Core Architecture Grid */
+.footer-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+}
+
+.footer-links-wrapper {
+  display: flex;
+  gap: 4rem;
+}
+
+.footer-nav-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-connect-col {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.footer-nav-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+.footer-nav-col a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  width: fit-content;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.footer-nav-col a:hover {
+  opacity: 1;
+  color: var(--pink);
+}
+
+/* Social Icon Blocks Spacing Adjustments */
+.footer-socials {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
 
 .social-link {
   display: flex;
@@ -485,23 +691,34 @@ img { max-width: 100%; display: block; }
   justify-content: center;
   width: 38px;
   height: 38px;
-  color: var(--muted); /* Follows your journal's muted brown tone by default */
-  background: transparent;
+  color: var(--text);
   border-radius: 50%;
-  transition: color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+  transition: all 0.2s cubic-bezier(.34,1.56,.64,1);
 }
 
-/* Subtle feedback when interactive state is triggered */
 .social-link:hover {
-  color: var(--accent); /* Shifts cleanly to your dark accent palette */
-  background-color: var(--bg2); /* Subtle contrast background pop */
-  transform: translateY(-2px); /* Quick micro bounce */
+  color: var(--card);
+  transform: translateY(-3px) scale(1.05);
 }
 
-.social-link svg {
-  display: block;
-  width: 20px;
-  height: 20px;
+.footer-copy-inline {
+  font-family: var(--font-hand);
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Footer Bottom Strip Details */
+.footer-bottom {
+  text-align: center;
+  padding-top: 0.25rem;
+}
+
+.footer-heart { 
+  font-family: var(--font-hand); 
+  font-size: 0.85rem; 
+  color: var(--muted);
+  margin: 0;
 }
 
 /* REVEAL */
@@ -533,4 +750,16 @@ img { max-width: 100%; display: block; }
   .nav-card-img { width: 48px; height: 48px; }
   .nav-card-title { font-size: 0.8rem; }
   .gallery-btn { width: 34px; height: 34px; font-size: 0.85rem; }
+    .footer-nav-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .footer-links-wrapper {
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .footer-connect-col {
+    align-items: center;
+    text-align: center;
+  }
 }

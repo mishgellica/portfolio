@@ -7,7 +7,7 @@
   <link rel="icon" type="image/jpeg" href="assets/apple.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400;600;700&family=Nunito:wght@300;400;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Inter:wght@900&family=Syne:wght@800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -52,14 +52,15 @@
 
     <div class="hero-inner">
       <div class="hero-photo-wrap">
-        
         <div class="photo-frame">
             <img src="assets/mergrande.jpg" alt="Karylle Mish Gellica" />
         </div>
       </div>
       <div class="hero-text">
-        <h1 class="hero-name">Karylle Mish<br/>Gellica</h1>
-        <p class="hero-role">Software Developer</p>
+        <h1 class="hero-name">
+          <span class="first-name">Karylle Mish</span>
+          <span class="last-name">Gellica</span>
+        </h1>
         <p class="hero-sub">A Computer Science student and software developer with experience in systems analysis and technical project development. 
           Eager to apply my background in data modeling and optimization to real-world challenges, and passionate about helping 
           teams build efficient, secure digital solutions.</p>
@@ -94,7 +95,7 @@
           <span class="stat-label">Year CS Student</span>
         </div>
         <div class="stat-item">
-          <span class="stat-num">8+</span>
+          <span class="stat-num">7+</span>
           <span class="stat-label">Projects Built</span>
         </div>
         <div class="stat-item">
@@ -110,7 +111,7 @@
   </section>
 
 <!-- SKILLS -->
-  <section class="section skills-section" id="skills">
+  <section class="section skills-section grid-paper-bg" id="skills">
     <div class="tape-strip tape-2"></div>
     <h2 class="section-title">✦ what i know</h2>
 
@@ -201,11 +202,10 @@
           <img src="assets/mysql.png" alt="MySQL Logo" class="tech-logo" loading="lazy">
         </div>
       </div>
-
     </div>
   </section>
 
-  <section class="section projects-section" id="projects">
+  <section class="section projects-section grid-paper-bg" id="projects">
     <h2 class="section-title">✦ projects i've helped build</h2>
     <div class="hero-doodle hero-doodle-line"></div>
     <div class="hero-doodle hero-doodle-dots"></div>
@@ -541,104 +541,160 @@
   </section>
 
   <!-- CONTACT -->
- <section class="section contact-section" id="contact">
-  <div class="tape-strip tape-6"></div>
-  
-  <div class="contact-header">
-    <h2 class="section-title">✦ let's connect</h2>
-    <p class="contact-sub">Open for internship opportunities, technical collaborations, or just a friendly conversation about web development and software design. Let's connect and build something great together.</p>
-  </div>
-
-  <div class="contact-wrap">
-    <div class="contact-links">
-      <a href="mailto:mishgellica@gmail.com?Subject=Hello" target="_top"class="contact-card minimal-contact">
-        <span class="contact-icon">
-          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-        </span>
-        <span class="contact-val">mishgellica@gmail.com</span>
-        <span class="contact-arrow">&#8599;</span>
-      </a>
-
-      <a href="https://github.com/mishgellica" target="_blank" class="contact-card minimal-contact">
-        <span class="contact-icon">
-          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-        </span>
-        <span class="contact-val">github.com/mishgellica</span>
-        <span class="contact-arrow">&#8599;</span>
-      </a>
-
-      <a href="https://www.linkedin.com/in/kgellica/" target="_blank" class="contact-card minimal-contact">
-        <span class="contact-icon">
-          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-        </span>
-        <span class="contact-val">linkedin.com/in/kgellica</span>
-        <span class="contact-arrow">&#8599;</span>
-      </a>
-
-      <a href="https://www.facebook.com/kgellica/" target="_blank" class="contact-card minimal-contact">
-        <span class="contact-icon">
-          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-        </span>
-        <span class="contact-val">facebook.com/kgellica</span>
-        <span class="contact-arrow">&#8599;</span>
-      </a>
-
-      <div class="contact-card minimal-contact location-item">
-        <span class="contact-icon">
-          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-        </span>
-        <span class="contact-val">Davao City, Philippines</span>
-      </div>
-    </div>
-
-    <form class="contact-form scrapbook-card" id="contactForm">
-      <div class="card-tape card-tape-1"></div>
-      <h3>send me a note! ✶</h3>
-      
-      <div class="form-group">
-        <label for="fname">Name</label>
-        <input type="text" id="fname" name="name" placeholder="Enter your name" required />
-      </div>
-      
-      <div class="form-group">
-        <label for="femail">Email</label>
-        <input type="email" id="femail" name="email" placeholder="Enter your email" required />
-      </div>
-      
-      <div class="form-group">
-        <label for="fmessage">Message</label>
-        <textarea id="fmessage" name="message" rows="4" placeholder="Enter message" required></textarea>
-      </div>
-      
-      <button type="submit" class="btn btn-primary full-width" id="submitBtn">send it</button>
-      <p class="form-note" id="formNote"></p>
-    </form>
-  </div>
-</section>
-
-  <footer class="footer">
-    <p class="footer-logo">kmg</p>
+  <section class="section contact-section" id="contact">
+    <div class="tape-strip tape-6"></div>
     
-    <div class="footer-socials">
-      <a href="https://www.facebook.com/kgellica/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-      </a>
-      
-      <a href="https://www.linkedin.com/in/kgellica/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      </a>
-      
-      <a href="https://github.com/mishgellica" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-      </a>
-      
-      <a href="mailto:mishgellica@gmail.com.com" class="social-link" aria-label="Email">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      </a>
+    <div class="contact-header">
+      <h2 class="section-title">✦ let's connect</h2>
+      <p class="contact-sub">Open for internship opportunities, technical collaborations, or just a friendly conversation about web development and software design. Let's connect and build something great together.</p>
     </div>
 
-    <p class="footer-copy">designed & built by Karylle Mish Gellica &middot; <span id="fyear"></span></p>
-    <p class="footer-heart">made with love</p>
+    <div class="contact-wrap">
+      <div class="contact-links">
+        <a href="mailto:mishgellica@gmail.com?Subject=Hello" target="_top"class="contact-card minimal-contact">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </span>
+          <span class="contact-val">mishgellica@gmail.com</span>
+          <span class="contact-arrow">&#8599;</span>
+        </a>
+
+        <a href="https://github.com/mishgellica" target="_blank" class="contact-card minimal-contact">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </span>
+          <span class="contact-val">github.com/mishgellica</span>
+          <span class="contact-arrow">&#8599;</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/kgellica/" target="_blank" class="contact-card minimal-contact">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </span>
+          <span class="contact-val">linkedin.com/in/kgellica</span>
+          <span class="contact-arrow">&#8599;</span>
+        </a>
+
+        <a href="https://www.facebook.com/kgellica/" target="_blank" class="contact-card minimal-contact">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </span>
+          <span class="contact-val">facebook.com/kgellica</span>
+          <span class="contact-arrow">&#8599;</span>
+        </a>
+
+        <div class="contact-card minimal-contact location-item">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </span>
+          <span class="contact-val">Davao City, Philippines</span>
+        </div>
+      </div>
+
+      <form class="contact-form scrapbook-card" id="contactForm">
+        <div class="card-tape card-tape-1"></div>
+        <h3>send me a note! ✶</h3>
+        
+        <div class="form-group">
+          <label for="fname">Name</label>
+          <input type="text" id="fname" name="name" placeholder="Enter your name" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="femail">Email</label>
+          <input type="email" id="femail" name="email" placeholder="Enter your email" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="fmessage">Message</label>
+          <textarea id="fmessage" name="message" rows="4" placeholder="Enter message" required></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary full-width" id="submitBtn">send it</button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="footer-top">
+      <!-- Part 1: Status & Time Group -->
+      <div class="footer-status-group">
+        <div class="footer-status">
+          <span class="status-dot"></span>
+          <span class="status-text">Available for internship</span>
+        </div>
+        <div class="footer-time">
+          <span id="localTime">--:--</span> local time in Davao
+        </div>
+      </div>
+
+      <!-- Part 2: Centered Brand Info -->
+      <div class="footer-brand">
+        <p class="footer-logo">Karylle Mish Gellica</p>
+        <p class="footer-tagline">Aspiring Software Developer ✦ Davao City, PH</p>
+      </div>
+
+      <!-- Part 3: Action Buttons (Resume & Chat) -->
+      <div class="footer-cta">
+        <a href="assets/karylle-gellica-resume.pdf" download class="footer-resume-btn">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          view resume
+        </a>
+        <a href="#contact" class="footer-cta-btn">let's talk →</a>
+      </div>
+    </div>
+
+    <hr class="footer-divider" />
+
+    <!-- Modified into a 2-Column Responsive Layout -->
+    <div class="footer-nav-grid">
+      <div class="footer-links-wrapper">
+        <div class="footer-nav-col">
+          <span class="footer-nav-label">explore</span>
+          <a href="#about">about</a>
+          <a href="#skills">skills</a>
+          <a href="#projects">projects</a>
+        </div>
+
+        <div class="footer-nav-col">
+          <span class="footer-nav-label">more</span>
+          <a href="#education">education</a>
+          <a href="#certifications">certifications</a>
+          <a href="#contact">contact</a>
+        </div>
+      </div>
+
+      <!-- Right Side: Social Media & Date Details -->
+      <div class="footer-nav-col footer-connect-col">
+        <span class="footer-nav-label">connect</span>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/kgellica/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/kgellica/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://github.com/mishgellica" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="mailto:mishgellica@gmail.com" class="social-link" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+        <p class="footer-copy-inline"><span id="fyear"></span> © Karylle Mish Gellica</p>
+      </div>
+    </div>
+
+    <hr class="footer-divider" />
+    
+    <div class="footer-bottom">
+      <p class="footer-heart">made with love (and a little bit of curiosity — check your console)</p>
+    </div>
   </footer>
   <script src="js/main.js"></script>
 </body>

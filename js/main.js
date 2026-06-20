@@ -57,12 +57,6 @@ document.querySelectorAll('.section-title,.about-grid,.skill-item,.project-card,
 });
 
 // ==========================================
-// 6. DYNAMIC FOOTER YEAR STAMP
-// ==========================================
-const fy = document.getElementById('fyear');
-if (fy) fy.textContent = new Date().getFullYear();
-
-// ==========================================
 // 7. CONTACT FORM SUBMISSION (Formspree)
 // ==========================================
 const form       = document.getElementById('contactForm');
@@ -143,3 +137,40 @@ window.closeCertModal = function() {
   }
 };
 
+  function initFooterFeatures() {
+    // 1. LIVE LOCAL TIME — Davao City (Asia/Manila, UTC+8)
+    const timeEl = document.getElementById('localTime');
+    if (timeEl) {
+      const updateTime = () => {
+        const now = new Date();
+        const options = { hour: '2-digit', minute: '2-digit', hour12: true, timeZone: 'Asia/Manila' };
+        timeEl.textContent = now.toLocaleTimeString('en-US', options);
+      };
+      updateTime();
+      setInterval(updateTime, 30000); // 30s tick cycle
+    }
+
+    // 2. DYNAMIC YEAR AUTO-INJECTOR
+    const yearEl = document.getElementById('fyear');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initFooterFeatures();
+
+    // 3. CONSOLE EASTER EGG
+    console.log(
+      "%c✦ hey there, fellow dev! ✦",
+      "color:#c97a7a; font-size:16px; font-weight:bold; font-family: sans-serif;"
+    );
+    console.log(
+      "%cthanks for poking around. if you're a recruiter or just curious — let's connect: mishgellica@gmail.com",
+      "color:#4a7a5a; font-size:13px; font-family: sans-serif;"
+    );
+    console.log(
+      "%c(and yes, this portfolio was hand-coded with a lot of trial, error, and iced coffee.)",
+      "color:#7a6050; font-size:12px; font-style: italic; font-family: sans-serif;"
+    );
+  });
