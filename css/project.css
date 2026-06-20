@@ -120,7 +120,7 @@ img { max-width: 100%; display: block; }
   position: absolute; inset: 0;
   background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
   background-size: 28px 28px;
-  opacity: 0.2;
+  opacity: 0.8;
   pointer-events: none;
 }
 .project-hero-inner { position: relative; z-index: 2; max-width: 800px; }
