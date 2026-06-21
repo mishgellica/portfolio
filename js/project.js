@@ -151,3 +151,20 @@ document.addEventListener('DOMContentLoaded', () => {
     "color:#7a6050; font-size:12px; font-style: italic; font-family: sans-serif;"
   );
 });
+
+const backToTopButton = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopButton.classList.add("show");
+  } else {
+    backToTopButton.classList.remove("show");
+  }
+});
+
+backToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});

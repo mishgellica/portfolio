@@ -85,20 +85,7 @@ body::before {
 [data-theme="dark"] .cursor { mix-blend-mode: screen; }
 
 /* THEME TOGGLE */
-.theme-toggle {
-  position: fixed;
-  bottom: 2rem; right: 2rem;
-  z-index: 500;
-  background: var(--card);
-  border: 2px solid var(--border);
-  border-radius: 50%;
-  width: 46px; height: 46px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  box-shadow: var(--shadow);
-  transition: transform 0.2s;
-  display: flex; align-items: center; justify-content: center;
-}
+.theme-toggle { position: fixed; bottom: 2rem; right: 2rem; z-index: 500;  background: var(--card); border: 2px solid var(--border);color: var(--text); border-radius: 50%; width: 46px; height: 46px; cursor: pointer; font-size: 1.1rem; transition: transform 0.2s; display: flex; align-items: center; justify-content: center; }
 .theme-toggle:hover { transform: rotate(20deg) scale(1.1); }
 
 /* PAGE WRAPPER */
@@ -123,9 +110,18 @@ body::before {
 
 /* HERO */
 .project-hero {
-  padding: 2rem 8% 3rem;
+  padding: 3rem 6% 3rem;
   position: relative;
   overflow: hidden;
+  width:100%;
+}
+.project-hero-grid-wrapper {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* Left side slightly wider than the slider side */
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .project-hero-inner { position: relative; z-index: 2; max-width: 800px; }
 .project-badge-row {
@@ -153,16 +149,16 @@ body::before {
 }
 .project-hero h1 {
   font-family: var(--font-logo);
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   color: var(--text);
   line-height: 1.1;
   margin-bottom: 1rem;
 }
 .project-tagline {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--muted);
   line-height: 1.8;
-  max-width: 600px;
+  max-width: 100%;
   margin-bottom: 1.8rem;
 }
 .project-hero-links {
@@ -188,11 +184,12 @@ body::before {
 
 /* IMAGE GALLERY */
 .gallery-section {
-  padding: 0 4% 4rem;
+  padding: 0;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%
 }
 .gallery-wrap {
   position: relative;
@@ -691,6 +688,39 @@ body::before {
   white-space: nowrap; 
 }
 
+/* BACK TO TOP (STACKED ON TOP OF TOGGLE) */
+.back-to-top {
+  position: fixed;
+  bottom: 5.5rem; 
+  right: 2rem;    
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 2px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;  
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.3s cubic-bezier(.34,1.56,.64,1);
+}
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  background: var(--pink);
+  border-color: var(--pink);
+  color: var(--card); 
+  transform: translateY(-4px);
+}
+
 /* REVEAL */
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -706,13 +736,11 @@ body::before {
   .info-strip-item { border-right: none; border-bottom: 1.5px solid var(--border); }
   .info-strip-item:last-child { border-bottom: none; }
   .back-btn { padding: 1.5rem 5% 0; }
-  .project-hero { padding: 1.5rem 5% 2.5rem; }
   .gallery-section { padding: 0 5% 3rem; }
   .info-strip { margin: 0 5% 3rem; }
   .story-section { padding: 0 5% 3rem; }
   .tech-section { padding: 0 5% 3rem; }
   .contributors-section { padding: 0 5% 3rem; }
-  .project-nav { padding: 0 5% 4rem; }
   .section-divider { margin: 0 5% 2.5rem; }
     .footer-top {
     flex-direction: column;
@@ -724,6 +752,18 @@ body::before {
     align-items: center;
     text-align: center;
     min-width: 100%;
+  }
+  .project-hero {
+    padding: 2rem 5% 3rem;
+  }
+  
+  .project-hero-grid-wrapper {
+    grid-template-columns: 1fr; /* Flips into single vertical stack row */
+    gap: 2rem;
+  }
+  
+  .gallery-wrap {
+    max-width: 600px; /* Restricts layout blowing out on tablet viewports */
   }
 }
 @media (max-width: 600px) {
@@ -749,5 +789,11 @@ body::before {
 
   .footer-socials {
     justify-content: center;
+  }
+  .back-to-top {
+    bottom: 2rem;
+    right: 1.5rem;
+    width: 42px;
+    height: 42px;
   }
 }

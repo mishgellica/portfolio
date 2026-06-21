@@ -175,8 +175,7 @@ window.closeCertModal = function() {
     );
   });
 
-  const backToTopBtn = document.getElementById("backToTop");
-
+const backToTopBtn = document.getElementById("backToTop");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 400) {
     backToTopBtn.classList.add("show");

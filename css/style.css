@@ -1667,10 +1667,11 @@ a.minimal-contact:hover .contact-icon {
   margin: 0;
   white-space: nowrap; 
 }
+/* BACK TO TOP (STACKED ON TOP OF TOGGLE) */
 .back-to-top {
   position: fixed;
-  bottom: 2rem;
-  left: 2rem;
+  bottom: 5.5rem; 
+  right: 2rem;    
   width: 46px;
   height: 46px;
   border-radius: 50%;
@@ -1681,7 +1682,7 @@ a.minimal-contact:hover .contact-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 99; 
+  z-index: 500;  
   opacity: 0;
   visibility: hidden;
   transform: translateY(15px);
@@ -1767,7 +1768,7 @@ a.minimal-contact:hover .contact-icon {
     justify-content: center;
   }
     .back-to-top {
-    bottom: 1.5rem;
+    bottom: 2rem;
     right: 1.5rem;
     width: 42px;
     height: 42px;
