@@ -54,9 +54,21 @@ body {
   overflow-x: hidden;
   cursor: none;
   transition: background 0.4s, color 0.4s;
+  position: relative;
 }
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: -1; 
+}
 
 /* CURSOR */
 .cursor {
@@ -114,14 +126,6 @@ img { max-width: 100%; display: block; }
   padding: 2rem 8% 3rem;
   position: relative;
   overflow: hidden;
-}
-.project-hero::before {
-  content: '';
-  position: absolute; inset: 0;
-  background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
-  background-size: 28px 28px;
-  opacity: 0.8;
-  pointer-events: none;
 }
 .project-hero-inner { position: relative; z-index: 2; max-width: 800px; }
 .project-badge-row {

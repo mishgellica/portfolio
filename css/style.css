@@ -623,13 +623,14 @@ img { max-width: 100%; display: block; }
   opacity: 1;
 }
 
-  /* PROJECTS */
+ /* PROJECTS */
 .projects-grid { 
   display: grid; 
   grid-template-columns: repeat(4, 1fr); 
   gap: 2rem 1.5rem; 
   width: 100%;
 }
+
 .project-card { 
   position: relative; 
   overflow: hidden; 
@@ -639,20 +640,39 @@ img { max-width: 100%; display: block; }
   border-radius: 16px;    
   padding: 16px;          
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
   height: 100%;        
-  transform: translateY(0);
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
-              box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1); 
-}
-.project-card:hover {
-  cursor: pointer;
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(0) scale(1) rotate(0deg);
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background-color 0.3s ease;
 }
 
+/* 🌟 FIXED: Explicitly separated odd/even rules to guarantee all cards jump */
+.project-card:hover {
+  cursor: pointer;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
+  background-color: var(--bg);
+}
+
+.project-card:nth-child(odd):hover {
+  transform: translateY(-8px) scale(1.02) rotate(-1deg);
+}
+
+.project-card:nth-child(even):hover {
+  transform: translateY(-8px) scale(1.02) rotate(1deg);
+}
+
+/* IMAGE INNER ANIMATIONS */
 .project-card:hover .project-img-wrap img {
-  transform: scale(1.05); 
+  transform: scale(1.12);
+}
+
+.project-card:nth-child(odd):hover .project-img-wrap {
+  transform: scale(0.96) rotate(1.5deg);
+}
+
+.project-card:nth-child(even):hover .project-img-wrap {
+  transform: scale(0.96) rotate(-1.5deg);
 }
 
 .card-link-overlay {
@@ -661,13 +681,14 @@ img { max-width: 100%; display: block; }
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 5; 
+  z-index: 4; 
 }
 
 .featured-card { 
   grid-column: auto !important; 
   flex-direction: column !important; 
 }
+
 .project-img-wrap {
   width: 100%;
   aspect-ratio: 16 / 9;  
@@ -676,13 +697,15 @@ img { max-width: 100%; display: block; }
   position: relative;
   z-index: 1; 
   margin-bottom: 4px;     
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .project-img-wrap img { 
   width: 100%; 
   height: 100%; 
   object-fit: cover; 
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  /* 🌟 FIXED: Synced timing curve with parent wrapper for buttery smooth scaling */
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .project-img-wrap::after {
@@ -698,11 +721,13 @@ img { max-width: 100%; display: block; }
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
+/* 🌟 CLEANED: Merged duplicate declarations into a single block */
 .project-info { 
   padding: 0.75rem 0.25rem 0.25rem 0.25rem; 
   display: flex; 
   flex-direction: column; 
   gap: 0.5rem;
+  position: relative;
 }
 
 .project-meta-row {
@@ -739,8 +764,24 @@ img { max-width: 100%; display: block; }
   font-size: 1.15rem; 
   line-height: 1.2;
   color: var(--text); 
-  margin: 0;                     
+  margin: 0;                               
 }
+
+/* TAG & BADGE ANIMATIONS */
+.project-badges .badge,
+.project-stack .stack-tag {
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease;
+}
+
+.project-card:hover .project-badges .badge {
+  transform: scale(1.1) translateY(-3px);
+}
+
+.project-card:hover .stack-tag:nth-child(1) { transform: translateY(-4px) rotate(-2deg); transition-delay: 0.02s; }
+.project-card:hover .stack-tag:nth-child(2) { transform: translateY(-2px) rotate(3deg);  transition-delay: 0.06s; }
+.project-card:hover .stack-tag:nth-child(3) { transform: translateY(-5px) rotate(-1deg); transition-delay: 0.10s; }
+.project-card:hover .stack-tag:nth-child(4) { transform: translateY(-3px) rotate(2deg);  transition-delay: 0.14s; }
 
 .project-stack { 
   display: flex; 
@@ -756,6 +797,50 @@ img { max-width: 100%; display: block; }
   font-family: var(--font-hand); 
   font-size: 0.85rem;
   border: none !important; 
+}
+
+/* SPARKLES GRAPHICS */
+.card-sparkles {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  display: flex;
+  gap: 4px;
+  pointer-events: none;
+  font-size: 1.1rem;
+  color: var(--accent, #ff7a00); 
+}
+
+.card-sparkles span {
+  opacity: 0;
+  transform: scale(0.3) translateY(10px);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+}
+
+.project-card:hover .card-sparkles span:nth-child(1) {
+  opacity: 1;
+  transform: scale(1) translateY(-4px) rotate(-15deg);
+  transition-delay: 0.1s;
+  animation: jitterSparkle 2s infinite alternate ease-in-out 0.2s;
+}
+
+.project-card:hover .card-sparkles span:nth-child(2) {
+  opacity: 1;
+  transform: scale(1.3) translateY(-10px);
+  transition-delay: 0.05s;
+  animation: jitterSparkle 1.5s infinite alternate ease-in-out;
+}
+
+.project-card:hover .card-sparkles span:nth-child(3) {
+  opacity: 1;
+  transform: scale(1) translateY(-4px) rotate(15deg);
+  transition-delay: 0.15s;
+  animation: jitterSparkle 2s infinite alternate ease-in-out 0.4s;
+}
+
+@keyframes jitterSparkle {
+  0% { transform: translateY(-10px) scale(1.3) rotate(0deg); opacity: 0.9; }
+  100% { transform: translateY(-13px) scale(1.4) rotate(10deg); opacity: 1; }
 }
 
 .project-links {
@@ -778,7 +863,7 @@ img { max-width: 100%; display: block; }
   transform: translateY(-2px);
 }
 
-/* Responsive Overrides for Tablets/Mobile Screen Sizes */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr; 

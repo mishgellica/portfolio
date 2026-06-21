@@ -21,7 +21,8 @@
           <span class="project-badge brown">2025</span>
         </div>
         <h1>IrisHR</h1>
-        <p class="project-tagline">A company platform built to move messy employee files, leave requests, and performance reviews online — with serious attention to keeping private data actually private.</p>
+        <p class="project-tagline">A company platform built to move messy employee files, leave requests, and performance reviews online,
+           with serious attention to keeping private data actually private.</p>
         <div class="project-hero-links">
           <a href="https://github.com/mishgellica/irishr-ms" target="_blank" class="hero-link primary">
             <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
@@ -61,22 +62,35 @@
         <div class="story-tape story-tape-1"></div>
         <div class="story-card-label">the challenge</div>
         <h3>What problem did we solve?</h3>
-        <p>Traditional HR systems are full of security holes — privilege escalation, unauthorized employee record access, data tampering, and leaks of sensitive personal and financial data. Most of these aren't theoretical risks either; they happen when systems are built without thinking about access control from the ground up.</p>
+        <p>Traditional HR processes are heavily bottlenecked by manual administrative workflows, fragmented employee data, 
+          and inefficient payroll and performance tracking. Without a centralized system, managing varied access permissions 
+          for administrative staff, operational managers, and general employees leads to massive communication overhead, 
+          untracked data changes, and a slow, error-prone workforce lifecycle management process.</p>
       </div>
       <div class="story-card">
         <div class="story-tape story-tape-2"></div>
         <div class="story-card-label">what we built</div>
         <h3>How did we solve it?</h3>
-        <p>We developed a multi-tier HR web architecture protected by rigid Role-Based Access Control levels — Admin, HR Manager, and Employee. We conducted a full Security Threat Analysis to identify system vulnerabilities, then implemented audit logging, input sanitization, and proactive security patches to actively mitigate data disclosure and unauthorized manipulation risks.</p>
+        <p>We developed IrisHR, a modern multi-tier HRMS web architecture designed to streamline operations via explicit, 
+          tailored user experiences. We mapped out clear operational workflows and implemented functional Role-Based Access 
+          Control (RBAC) across three primary levels—Admin, HR Manager, and Employee—ensuring that payroll processing, 
+          performance evaluations, and profile management are seamlessly partitioned, automated, and audited across the platform.</p>
       </div>
       <div class="story-card full-width">
         <div class="story-tape story-tape-3"></div>
         <div class="story-card-label">what i learned</div>
         <h3>What did this teach me?</h3>
-        <p>Security used to feel like an afterthought to me — something you bolted on at the end. Building IrisHR forced me to think about it as a structural decision made at every layer. When you're handling employee salaries, performance reviews, and personal identifiers, the cost of getting it wrong isn't just a bug you patch — it's someone's data being exposed. Learning to model threats before writing a single line of code changed how I approach every project now. I also got deep into RBAC implementation and learned how nuanced permission systems really are — the difference between what a user should see and what they can technically access is a gap you have to deliberately close at every endpoint, not just the frontend.</p>
+        <p>Building a comprehensive HRMS forced me to transition from thinking about software as a collection of isolated 
+          features to viewing it as an interconnected operational ecosystem. Handling nuanced workplace dependencies like 
+          salary structures and sensitive personal identifiers taught me how critical data integrity 
+          and clear database modeling are to business operations. Architecting the RBAC system highlighted the complexity 
+          of software ergonomics, the massive technical gap between what information a user needs to see to perform their job 
+          efficiently versus what data boundaries must be strictly maintained at every endpoint. This project changed how I 
+          approach full-stack workflows, teaching me to map out user roles and business rules thoroughly before writing a 
+          single line of code.</p>
       </div>
     </div>
-    <hr class="section-divider" />
+ 
     <div class="tech-section">
       <h2>Tech Stack</h2>
       <div class="tech-grid">
@@ -89,7 +103,7 @@
         <div class="tech-item">Audit Logging</div>
       </div>
     </div>
-    <hr class="section-divider" />
+ 
     <div class="contributors-section">
       <h2>Contributors</h2>
       <div class="contributors-list">
@@ -97,15 +111,15 @@
         <span class="contributor-pill">Christian James C. Cahilig</span>
       </div>
     </div>
-    <hr class="section-divider" />
+ 
     <div class="project-nav">
       <a href="diabetes-prediction.html" class="project-nav-card">
         <div class="nav-card-img"><img src="../assets/diabetes.png" alt="Diabetes" /></div>
-        <div><div class="nav-card-label">← previous</div><div class="nav-card-title">Diabetes Prediction System</div></div>
+        <div><div class="nav-card-label">← previous</div><div class="nav-card-title">Diabetes Risk Predictor</div></div>
       </a>
       <a href="leo-revita.html" class="project-nav-card next-card">
         <div class="nav-card-img"><img src="../assets/leorevita.png" alt="Leo Revita" /></div>
-        <div><div class="nav-card-label">next →</div><div class="nav-card-title">Leo Revita | Salon Management System</div></div>
+        <div><div class="nav-card-label">next →</div><div class="nav-card-title">Leo Revita HSMS</div></div>
       </a>
     </div>
   </div>

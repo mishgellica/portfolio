@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Diabetes Risk Prediction</title>
+  <title>Diabetes Risk Predictor</title>
   <link rel="icon" type="image/jpeg" href="../assets/apple.jpg">
   <link rel="stylesheet" href="../css/project.css" />
 </head>
@@ -22,7 +22,7 @@
           <span class="project-badge green">Machine Learning</span>
           <span class="project-badge brown">2025</span>
         </div>
-        <h1>Diabetes Risk Prediction</h1>
+        <h1>Diabetes Risk Predictor</h1>
         <p class="project-tagline">An interactive predictive tool designed to evaluate and identify an individual's risk of developing diabetes based on physiological and diagnostic measurements.</p>
         <div class="project-hero-links">
           <a href="https://github.com/mishgellica/diabetes-risk-prediction" target="_blank" class="hero-link primary">
@@ -65,22 +65,31 @@
         <div class="story-tape story-tape-1"></div>
         <div class="story-card-label">the challenge</div>
         <h3>What problem did we solve?</h3>
-        <p>Early detection of diabetes is critical to mitigating severe health complications, but clinical benchmark data often contains biologically implausible gaps — missing or zero entries in crucial insulin and blood pressure metrics — which cause standard classification algorithms to output misleading medical risk predictions.</p>
+        <p>Early detection of diabetes is critical to mitigating severe health complications, but clinical benchmark data often contains biologically 
+          implausible gaps like missing or zero entries in crucial insulin and blood pressure metrics which cause standard classification algorithms 
+          to output misleading medical risk predictions.</p>
       </div>
       <div class="story-card">
         <div class="story-tape story-tape-2"></div>
         <div class="story-card-label">what we built</div>
         <h3>How did we solve it?</h3>
-        <p>We implemented a data-clearing pipeline using targeted mean and median imputation alongside Interquartile Range outlier capping to stabilize data variance. The preprocessed metrics were then evaluated across multiple non-parametric ensemble models, with Gradient Boosting achieving the highest overall accuracy at 76% and optimal balance of sensitivity for early-stage risk isolation.</p>
+        <p>We implemented a data-clearing pipeline using targeted mean and median imputation alongside Interquartile Range outlier capping to stabilize 
+          data variance. The preprocessed metrics were then evaluated across multiple non-parametric ensemble models, with Gradient Boosting achieving 
+          the highest overall accuracy at 76% and optimal balance of sensitivity for early-stage risk isolation.</p>
       </div>
       <div class="story-card full-width">
         <div class="story-tape story-tape-3"></div>
         <div class="story-card-label">what i learned</div>
         <h3>What did this teach me?</h3>
-        <p>I went into this project thinking data cleaning was the boring part you get through quickly before the interesting modeling begins. I was completely wrong. The moment I started actually looking at the dataset — zeroes in blood pressure fields, insulin readings that made no biological sense — I realized that garbage data doesn't just lower your accuracy, it makes your entire model untrustworthy for real-world use. That clicked something for me: in health applications especially, how you prepare the data is the most responsible thing you can do. I also got much more comfortable with evaluating models beyond just accuracy — understanding sensitivity versus specificity, and why a model that misses actual diabetic patients is far more dangerous than one that over-flags healthy ones.</p>
+        <p>I went into this project thinking data cleaning was the boring part you get through quickly before the interesting modeling begins. 
+          I was completely wrong. The moment I started actually looking at the dataset, it had zeroes in blood pressure fields, insulin readings 
+          that made no biological sense. This made me realize that garbage data doesn't just lower your accuracy, it makes your entire model 
+          untrustworthy for real-world use. That clicked something for me: in health applications especially, how you prepare the data is the 
+          most responsible thing you can do. I also got much more comfortable with evaluating models beyond just accuracy. Understanding sensitivity 
+          versus specificity, and why a model that misses actual diabetic patients is far more dangerous than one that over-flags healthy ones.</p>
       </div>
     </div>
-    <hr class="section-divider" />
+ 
     <div class="tech-section">
       <h2>Tech Stack</h2>
       <div class="tech-grid">
@@ -92,24 +101,24 @@
         <div class="tech-item">Data Imputation</div>
       </div>
     </div>
-    <hr class="section-divider" />
+ 
     <div class="contributors-section">
       <h2>Contributors</h2>
       <div class="contributors-list">
         <span class="contributor-pill me">Karylle Mish Gellica</span>
-        <span class="contributor-pill">Bai Fatima A. Andong</span>
-        <span class="contributor-pill">Christian James C. Cahilig</span>
+        <span class="contributor-pill">Bai Fatima Andong</span>
+        <span class="contributor-pill">Christian James Cahilig</span>
       </div>
     </div>
-    <hr class="section-divider" />
+ 
     <div class="project-nav">
       <a href="android-malware.html" class="project-nav-card">
         <div class="nav-card-img"><img src="../assets/android.png" alt="Android Malware" /></div>
-        <div><div class="nav-card-label">← previous</div><div class="nav-card-title">Android Malware Ensemble Detector</div></div>
+        <div><div class="nav-card-label">← previous</div><div class="nav-card-title">Android Malware Detector</div></div>
       </a>
       <a href="irishr.html" class="project-nav-card next-card">
         <div class="nav-card-img"><img src="../assets/irishr.png" alt="IrisHR" /></div>
-        <div><div class="nav-card-label">next →</div><div class="nav-card-title">IrisHR | HR Management System</div></div>
+        <div><div class="nav-card-label">next →</div><div class="nav-card-title">IrisHR</div></div>
       </a>
     </div>
   </div>
