@@ -393,7 +393,7 @@ img { max-width: 100%; display: block; }
 
 .hero-inner {
   display: flex; align-items: center; justify-content: center;
-  gap: 10rem; padding: 2.5rem 8%;
+  gap: 4.5rem; padding: 2.5rem 8%;
   position: relative; z-index: 2;
 }
 .sp-1 { top: -25px; left: 15px; transform: scale(1.2) rotate(15deg); }
@@ -402,10 +402,13 @@ img { max-width: 100%; display: block; }
 .sp-4 { top: -10px; right: 25px; transform: scale(0.9) rotate(20deg); }
 
 /* PHOTO */
+.hero-photo-wrap {
+  position: relative; 
+}
 .photo-frame {
   width: 250px; 
   height: 310px;
-  border-radius: 125px 125px 0 0; /* Keeps the perfect arch shape */
+  border-radius: 125px 125px 0 0; 
   overflow: hidden;
   display: flex; 
   align-items: center; 
@@ -427,6 +430,27 @@ img { max-width: 100%; display: block; }
   border-radius: inherit; 
 }
 
+.darkmode-hint {
+  position: absolute;
+  top: -15px;
+  left: -40px;
+  background: var(--card, #fff);
+  border: 2px solid var(--text);
+  padding: 0.3rem 0.75rem;
+  border-radius: 30px 10px 30px 5px; /* Quirky scrapbook asymmetrical corner cuts */
+  transform: rotate(-10deg);
+  z-index: 5;
+  box-shadow: var(--shadow, 3px 3px 0 var(--text));
+  animation: floatHint 3s infinite alternate ease-in-out;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.darkmode-hint span {
+  font-family: var(--font-hand);
+  font-size: 0.85rem;
+  color: var(--text);
+  font-weight: bold;
+}
 /* HERO TEXT */
 .hero-text { max-width: 900px; }
 .hero-name {
@@ -444,12 +468,16 @@ img { max-width: 100%; display: block; }
   font-size: clamp(3rem, 5.8vw, 9rem);
   white-space: nowrap;
   letter-spacing: -0.02em;
+  display: inline-block;
+  animation: nameWobbleLeft 3s infinite alternate ease-in-out;
 }
 .hero-name .last-name {
   font-size: clamp(4.5rem, 10vw, 9.7rem);
   text-transform: uppercase; 
   white-space: nowrap;
   letter-spacing: -0.01em;
+  display: inline-block;
+  animation: nameWobbleRight 3s infinite alternate ease-in-out 0.5s;
 }
 .hero-role {
   font-family: var(--font-hand); font-size: 1.5rem; color: var(--text); font-weight: 700; letter-spacing: 0.02em;
@@ -475,6 +503,46 @@ img { max-width: 100%; display: block; }
 .btn-outline:hover { background: var(--pink-pale); }
 .sm-btn { font-size: 0.95rem; padding: 0.45rem 1.1rem; margin-top: 0.5rem; }
 .full-width { width: 100%; text-align: center; margin-top: 0.5rem; }
+
+@keyframes floatHint {
+  0% { transform: translateY(0) rotate(-10deg); }
+  100% { transform: translateY(-8px) rotate(-8deg); }
+}
+
+/* Wobbly breathing path transformations for first name */
+@keyframes nameWobbleLeft {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(-2px) rotate(-0.5deg) scale(1.005); }
+  100% { transform: translateY(1px) rotate(0.5deg) scale(0.995); }
+}
+
+/* Wobbly breathing path transformations for last name */
+@keyframes nameWobbleRight {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(2px) rotate(0.5deg) scale(0.998); }
+  100% { transform: translateY(-1px) rotate(-0.5deg) scale(1.002); }
+}
+
+/* MOBILE MEDIA QUERY TWEAK */
+@media (max-width: 900px) {
+  .hero-inner { 
+    flex-direction: column; 
+    text-align: center; 
+    gap: 3rem; /* Gives spacing fallback when everything turns stacked vertical */
+    padding: 2rem 5%; 
+  }
+  .darkmode-hint {
+    left: 50%;
+    transform: translateX(-50%) rotate(-5deg);
+    top: -25px;
+    animation: floatHintMobile 3s infinite alternate ease-in-out;
+  }
+}
+
+@keyframes floatHintMobile {
+  0% { transform: translateX(-50%) translateY(0) rotate(-5deg); }
+  100% { transform: translateX(-50%) translateY(-6px) rotate(-3deg); }
+}
 
 /* SECTIONS */
 .section { padding: 4rem 8%; position: relative; z-index: 2; }
@@ -1713,11 +1781,29 @@ a.minimal-contact:hover .contact-icon {
   .about-stats { max-width: 100%; }
   .featured-card { flex-direction: column; }
   .featured-card .project-img-wrap { width: 100%; border-right: none; border-bottom: 1.5px solid var(--border); }
-  .contact-wrap { grid-template-columns: 1fr; gap: 2.5rem;}
-  .contact-links {justify-self: center; width: 100%; max-width: 320px; margin: 0 auto;}
   .section { padding: 4rem 5%; }
   .scrap-label-1, .scrap-label-2, .scrap-sticker-1, .scrap-sticker-2, .scrap-sticker-3 { display: none; }
   .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .contact-wrap { 
+    grid-template-columns: 1fr; 
+    gap: 2.5rem;
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .contact-links {
+    justify-self: center; 
+    width: 100%; 
+    max-width: 320px; 
+    margin: 0 auto;
+  }
+  .contact-form {
+    justify-self: center;   
+    align-self: center;
+    width: 100%;
+    max-width: 450px;       
+    margin: 0 auto;         
+  }
   .footer-top {
     flex-direction: column;
     text-align: center;
