@@ -451,6 +451,18 @@ img { max-width: 100%; display: block; }
   color: var(--text);
   font-weight: bold;
 }
+[data-theme="dark"] .darkmode-hint span {
+  font-size: 0; 
+}
+[data-theme="dark"] .darkmode-hint span::after {
+  content: "ah, much better! 🌙"; 
+  font-family: var(--font-hand);
+  font-size: 0.85rem; 
+}
+[data-theme="dark"] .darkmode-hint {
+  transform: rotate(5deg); 
+  background: var(--card); 
+}
 /* HERO TEXT */
 .hero-text { max-width: 900px; }
 .hero-name {
